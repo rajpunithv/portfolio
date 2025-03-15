@@ -27,7 +27,6 @@ function Contact() {
         position: 'top-center',
       });
 
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -44,71 +43,71 @@ function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-8 md:py-16">
       <Toaster />
-      <h2 className="text-4xl font-bold mb-12 text-center text-gray-800 dark:text-gray-100">Contact Me</h2>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="space-y-8">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-gray-800 dark:text-gray-100">Contact Me</h2>
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="space-y-6 md:space-y-8">
           <div className="flex items-center space-x-4">
-            <Mail className="text-blue-600 dark:text-blue-400" size={24} />
+            <Mail className="text-blue-600 dark:text-blue-400 w-5 h-5 md:w-6 md:h-6" />
             <div>
               <h3 className="font-semibold text-gray-800 dark:text-gray-100">Email</h3>
-              <p className="text-gray-600 dark:text-gray-300">rajpunithvishnumolakala@gmail.com</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">rajpunithvishnumolakala@gmail.com</p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Phone className="text-blue-600 dark:text-blue-400" size={24} />
+            <Phone className="text-blue-600 dark:text-blue-400 w-5 h-5 md:w-6 md:h-6" />
             <div>
               <h3 className="font-semibold text-gray-800 dark:text-gray-100">Phone</h3>
-              <p className="text-gray-600 dark:text-gray-300">+91 63025 76908</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">+91 63025 76908</p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <MapPin className="text-blue-600 dark:text-blue-400" size={24} />
+            <MapPin className="text-blue-600 dark:text-blue-400 w-5 h-5 md:w-6 md:h-6" />
             <div>
               <h3 className="font-semibold text-gray-800 dark:text-gray-100">Location</h3>
-              <p className="text-gray-600 dark:text-gray-300">Vijayawada, India</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">Vijayawada, India</p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Linkedin className="text-blue-600 dark:text-blue-400" size={24} />
+            <Linkedin className="text-blue-600 dark:text-blue-400 w-5 h-5 md:w-6 md:h-6" />
             <div>
               <h3 className="font-semibold text-gray-800 dark:text-gray-100">LinkedIn</h3>
-              <p className="text-gray-600 dark:text-gray-300">Rajpunith Vishnumolakala</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">Rajpunith Vishnumolakala</p>
             </div>
           </div>
         </div>
         
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
             <input
               type="text"
               id="name"
               required
-              className="mt-1 block w-full h-10 text-lg px-4 rounded-md border-gray-300 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow focus:shadow-lg focus:border-blue-500 focus:ring-blue-500 transition-all"
+              className="w-full h-10 px-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
             <input
               type="email"
               id="email"
               required
-              className="mt-1 block w-full h-10 text-lg px-4 rounded-md border-gray-300 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow focus:shadow-lg focus:border-blue-500 focus:ring-blue-500 transition-all"
+              className="w-full h-10 px-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
             <textarea
               id="message"
               rows={4}
               required
-              className="mt-1 block w-full rounded-md border-gray-300 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow focus:shadow-lg focus:border-blue-500 focus:ring-blue-500 transition-all"
+              className="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             />
