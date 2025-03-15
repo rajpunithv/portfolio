@@ -10,7 +10,7 @@ function Projects() {
     },
     {
       title: 'Tic-Tac-Toe',
-      description: 'A simple and interactive Tic-Tac-Toe game built using HTML, CSS, and JavaScri',
+      description: 'A simple and interactive Tic-Tac-Toe game built using HTML, CSS, and JavaScript',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/rajpunithv/Tic-Tac-Toe'
     },
